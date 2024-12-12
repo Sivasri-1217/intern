@@ -29,9 +29,15 @@ error_handler.setFormatter(formatter)
 error_logger.addHandler(error_handler)
 
 # ================== Database Integration ==================
-# Use a relative path for SQLite in Render
-db_path = os.path.join(os.getcwd(), 'app_data.db')
-app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path}"
+# Check if DATABASE_URL environment variable is set
+database_url = os.getenv('DATABASE_URL')
+if database_url:
+    print(f"Database URL: {database_url}")
+else:
+    print("DATABASE_URL environment variable is NOT set!")
+
+# Use PostgreSQL on Render; fallback to SQLite locally if DATABASE_URL is not found
+app.config['SQLALCHEMY_DATABASE_URI'] = database_url if database_url else 'sqlite:///app_data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -87,7 +93,12 @@ def route_request_api():
         error_logger.error(f"Request processing failed: {str(e)}")
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
 
+# ================== Health Check Route ==================
+@app.route('/', methods=['GET'])
+def health_check():
+    return "Flask application running successfully!"
+
 # Run the Flask server
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Render's assigned port
+    port = int(os.environ.get('PORT', 5000))  # Bind Flask to Render's port
     app.run(host='0.0.0.0', port=port)
