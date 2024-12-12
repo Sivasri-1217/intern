@@ -1,0 +1,29 @@
+2024-12-08 10:00:01,123 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'IT'}, Assigned Approver: Direct Manager
+2024-12-08 10:05:12,456 - INFO - Request: {'type': 'Training', 'priority': 'Medium', 'department': 'HR'}, Assigned Approver: HR Head
+2024-12-08 10:10:45,789 - INFO - Request: {'type': 'Expense', 'priority': 'Low', 'department': 'Finance'}, Assigned Approver: Department Head
+2024-12-08 10:20:15,234 - INFO - Request: {'type': 'Leave', 'priority': 'Low', 'department': 'Marketing'}, Assigned Approver: Direct Manager
+2024-12-08 10:30:55,987 - INFO - Request: {'type': 'Promotion', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Senior Manager
+2024-12-09 10:35:57,527 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Approver: Direct Manager
+2024-12-09 10:36:26,951 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Approver: Direct Manager
+2024-12-09 10:37:30,445 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Approver: Direct Manager
+2024-12-09 10:42:50,114 - INFO - Request: {'type': 'Expense', 'priority': 'High', 'department': 'IT'}, Approver: Senior Manager
+2024-12-09 10:47:27,039 - INFO - Request: {'type': 'Expense', 'priority': 'High', 'department': 'IT'}, Approver: Senior Manager
+2024-12-09 10:48:09,241 - INFO - Request: {'type': 'Training', 'priority': 'Medium', 'department': 'HR'}, Approver: HR Head
+
+2024-12-09 11:18:37,536 - INFO - Request: {'type': 'Expense', 'priority': 'High', 'department': 'IT'}, Approver: Senior Manager
+2024-12-09 11:18:56,369 - INFO - Request: {'type': 'Training', 'priority': 'Medium', 'department': 'HR'}, Approver: Department Head
+2024-12-09 11:19:01,088 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Approver: Direct Manager
+2024-12-09 11:20:51,278 - INFO - Request: {'type': 'Leave'}, Approver: Direct Manager
+2024-12-09 11:26:43,224 - INFO - Request: {'type': 'Expense', 'priority': 'High', 'department': 'IT'}, Approver: Senior Manager
+2024-12-09 11:26:48,481 - INFO - Request: {'type': 'Training', 'priority': 'Medium', 'department': 'HR'}, Approver: HR Head
+2024-12-09 11:31:04,601 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-09 11:35:56,483 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-09 23:50:51,999 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-09 23:50:57,474 - INFO - Request: {'type': 'Expense', 'priority': 'High', 'department': 'IT'}, Assigned Approver: Senior Manager
+2024-12-09 23:51:02,902 - INFO - Request: {'type': 'Training', 'priority': 'Medium', 'department': 'HR'}, Assigned Approver: Department Head
+2024-12-10 13:21:05,997 - INFO - Request: {'type': 'Expense', 'priority': 'High', 'department': 'IT'}, Assigned Approver: Senior Manager
+2024-12-10 13:21:13,874 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-10 16:27:39,016 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-10 16:34:24,305 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-10 16:34:32,741 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
+2024-12-10 16:34:43,864 - INFO - Request: {'type': 'Leave', 'priority': 'High', 'department': 'Finance'}, Assigned Approver: Direct Manager
