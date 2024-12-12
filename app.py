@@ -7,7 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # ================== Logging Configuration ==================
-# Ensure the logs directory exists
 if not os.path.exists('logs'):
     os.makedirs('logs')
 
@@ -30,7 +29,9 @@ error_handler.setFormatter(formatter)
 error_logger.addHandler(error_handler)
 
 # ================== Database Integration ==================
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app_data.db'
+# Use a relative path for SQLite in Render
+db_path = os.path.join(os.getcwd(), 'app_data.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -41,7 +42,7 @@ class RequestLog(db.Model):
     approver = db.Column(db.String(50))
     timestamp = db.Column(db.DateTime, default=db.func.current_timestamp())
 
-# Initialize the database
+# Initialize the database (ensures the table is created)
 with app.app_context():
     db.create_all()
 
@@ -88,6 +89,5 @@ def route_request_api():
 
 # Run the Flask server
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Bind Flask to Render's PORT
+    port = int(os.environ.get('PORT', 5000))  # Render's assigned port
     app.run(host='0.0.0.0', port=port)
-
