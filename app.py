@@ -86,5 +86,8 @@ def route_request_api():
         error_logger.error(f"Request processing failed: {str(e)}")
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
 
+# Run the Flask server
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # Bind Flask to Render's PORT
+    app.run(host='0.0.0.0', port=port)
+
